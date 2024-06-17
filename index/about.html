@@ -10,54 +10,35 @@
     <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/react-spring@9/dist/react-spring-web.cjs.production.min.js"></script>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <style>
-        
-        
         body {
-            height: 400vh;
+            height: 500vh;
             top: 0;
             margin-top: 0;
             padding-top: 0;
             overflow-x: hidden;
             backdrop-filter: blur(0px);
         }
-         ::-webkit-scrollbar {
+        ::-webkit-scrollbar {
             width: 10px;
             height: 8px; 
         }
-
         ::-webkit-scrollbar-track {
             background: linear-gradient(to right, #2c2c2c, #000000);
         }
-       
         ::-webkit-scrollbar-thumb {
             background: linear-gradient(to right, #f0d605, #f3701a);
-            border-radius: 10px; /* Bords arrondis */
+            border-radius: 10px;
         }
-     
         ::-webkit-scrollbar-thumb:hover {
             background: linear-gradient(to right, #f7df6d, #f3701a);
         }
-
     </style>
-
 </head>
-
 <body>
-
-
-
     <div class="sec"> 
-       
-        <div class="repertory">
-            
-                Réalisation de Treashunt
-            
-        </div>
-    
+        <div class="repertory">Réalisation de Treashunt</div>
         <div class="process-wrapper">
             <div id="progress-bar-container">
                 <ul>
@@ -67,152 +48,120 @@
                     <li class="step step04"><div class="step-inner">8 fevrier</div></li>
                     <li class="step step05"><div class="step-inner">10 fevrier à 0h51</div></li>
                 </ul>
-                
                 <div id="line">
                     <div id="line-progress"></div>
                 </div>
             </div>
-    
             <div id="progress-content-section">
                 <div class="section-content discovery active">
                     <h2>Octobre</h2>
                     <p>Debut du projet, rédaction du cahier des charges, réflexion sur le jeu à travers plusieurs brainstormings lors de nos multiples appels, etc.</p>
                 </div>
-                
                 <div class="section-content strategy">
                     <h2>Janvier</h2>
                     <p>Première soutenance, présentation du projet à un investisseur.</p>
                 </div>
-                
                 <div class="section-content creative">
                     <h2>janvier/fevrier</h2>
                     <p>Concentration maximale, chacun se consacre pleinement à sa tâche en vue de la prochaine soutenance en mars.</p>
                 </div>
-                
                 <div class="section-content production">
                     <h2>8 fevrier</h2>
                     <p>Drame : tout le développement de la version multijoueur de Paul se supprime suite à un conflit git charmant.</p>
                 </div>
-                
                 <div class="section-content analysis">
                     <h2>10 fevrier à 0h51</h2>
                     <p>Version bêta test du multijoueur opérationnelle !</p>
                 </div>
-             
             </div>
         </div>
- 
-    <div class="repertory">
-            
-        Réalisation du Site Web 
+        <div class="repertory">Réalisation du Site Web</div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>Octobre 2023</h2>
+                    <p>C'est à ce mois que j'ai initié un repository sur GitHub pour héberger le site web de Treashunt.</p>
+                </div>
+                <div class="timeline-image">
+                    <img src="../media/GithubContent.png" alt="Image Octobre">
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>Janvier 2023</h2>
+                    <p>J'ai presque terminé la première version de la page d'accueil entièrement réalisée en HTML/CSS. Cette approche m'a permis d'acquérir une compréhension approfondie des bases du développement web.</p>
+                </div>
+                <div class="timeline-image">
+                    <img src="../media/prototypeWebsite.png" alt="Image Janvier">
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>Mars 2023</h2>
+                    <p>J'ai intégré mon premier effet parallax à la section "À propos" sans l'utilisation de bibliothèques JavaScript externes. Cela a nécessité la mise en place de gestionnaires d'événements et de transitions CSS pour créer un effet de défilement fluide.</p>
+                </div>
+                <div class="timeline-image">
+                    <img src="../media/gif-website.gif" alt="Image Mars">
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>Juin 2023</h2>
+                    <p>J'ai amélioré la page d'accueil en ajoutant un effet parallax et une animation GIF. L'animation a été entièrement créée à l'aide de clés d'animation CSS, ce qui a permis d'ajouter une dimension visuelle dynamique tout en maintenant la légèreté de la page.</p>
+                </div>
+                <div class="timeline-image">
+                    <img src="../media/runner.png" alt="Image Juin">
+                </div>
+            </div>
+            <div class="timeline-bar"></div>
+        </div>
     </div>
-
-    <div class="timeline">
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <h2>Octobre 2023</h2>
-                <p>C'est à ce mois que j'ai initié un repository sur GitHub pour héberger le site web de Treashunt.</p>
-            </div>
-            <div class="timeline-image">
-                <img src="path/to/image1.jpg" alt="Image Octobre">
-            </div>
-        </div>
-
-        <div class="timeline-item alt">
-            <div class="timeline-image">
-                <img src="path/to/image2.jpg" alt="Image Janvier">
-            </div>
-            <div class="timeline-content">
-                <h2>Janvier 2023</h2>
-                <p>J'ai presque terminé la première version de la page d'accueil entièrement réalisée en HTML/CSS. Cette approche m'a permis d'acquérir une compréhension approfondie des bases du développement web.</p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <h2>Mars 2023</h2>
-                <p>J'ai intégré mon premier effet parallax à la section "À propos" sans l'utilisation de bibliothèques JavaScript externes. Cela a nécessité la mise en place de gestionnaires d'événements et de transitions CSS pour créer un effet de défilement fluide.</p>
-            </div>
-            <div class="timeline-image">
-                <img src="path/to/image3.jpg" alt="Image Mars">
-            </div>
-        </div>
-
-        <div class="timeline-item alt">
-            <div class="timeline-image">
-                <img src="path/to/image4.jpg" alt="Image Juin">
-            </div>
-            <div class="timeline-content">
-                <h2>Juin 2023</h2>
-                <p>J'ai amélioré la page d'accueil en ajoutant un effet parallax et une animation GIF. L'animation a été entièrement créée à l'aide de clés d'animation CSS, ce qui a permis d'ajouter une dimension visuelle dynamique tout en maintenant la légèreté de la page.</p>
-            </div>
-        </div>
-
-        <div class="timeline-bar"></div> <!-- Barre de progression -->
-    </div>
-    
-    
-</div>
-    
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-
-
- <script>
-            
-            $(".step").click( function() {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(".step").click(function() {
             $(this).addClass("active").prevAll().addClass("active");
             $(this).nextAll().removeClass("active");
         });
 
-        $(".step01").click( function() {
+        $(".step01").click(function() {
             $("#line-progress").css("width", "3%");
             $(".discovery").addClass("active").siblings().removeClass("active");
         });
 
-        $(".step02").click( function() {
+        $(".step02").click(function() {
             $("#line-progress").css("width", "25%");
             $(".strategy").addClass("active").siblings().removeClass("active");
         });
 
-        $(".step03").click( function() {
+        $(".step03").click(function() {
             $("#line-progress").css("width", "50%");
             $(".creative").addClass("active").siblings().removeClass("active");
         });
 
-        $(".step04").click( function() {
+        $(".step04").click(function() {
             $("#line-progress").css("width", "75%");
             $(".production").addClass("active").siblings().removeClass("active");
         });
 
-        $(".step05").click( function() {
+        $(".step05").click(function() {
             $("#line-progress").css("width", "100%");
             $(".analysis").addClass("active").siblings().removeClass("active");
         });
 
-
-    
-   </script>
-    <script>
-        
-        const revealText = document.querySelector('.texte-partie')
-
-        window.addEventListener('scroll', () => {
-
-            const { scrollTop, clientHeight} = document.documentElement;
-
-            const deltaTop = revealText.getBoundingClientRect().top;
-
-            if (scrollTop > (scrollTop + deltaTop).toFixed() *0.3) {
-                revealText.classList.add('active');
+        $(document).ready(function() {
+            const revealText = document.querySelector('.texte-partie');
+            if (revealText) {
+                window.addEventListener('scroll', () => {
+                    const { scrollTop, clientHeight } = document.documentElement;
+                    const deltaTop = revealText.getBoundingClientRect().top;
+                    if (scrollTop > (scrollTop + deltaTop) * 0.3) {
+                        revealText.classList.add('active');
+                    }
+                });
             }
-        })
+        });
     </script>
-
-
- 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </body>
 </html>
