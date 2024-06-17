@@ -1,11 +1,12 @@
 body {
 
 	height: 300vh;
-	padding-top: -10%;
+	
 	margin: 0;
 	top: 0;
 	overflow-x: hidden;
-
+	text-decoration: none;
+	list-style: none;
 }
 
 
