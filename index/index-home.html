@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iboren Website</title>
+    <link rel="stylesheet" href="../style/style-home.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../media/iboren.png" id="ibo" alt="iboren">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index-home.html" class="active">Home</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="black-background">
+        <section>
+            <div class="parallax">
+                <div class="background-layer" data-speed="5"></div>
+                <img src="../media/Forestpt1.png" class="layer" id="plain" data-speed="0">
+                <img src="../media/Forestpt2.png" class="layer" id="sky" data-speed="2">
+                <img src="../media/logo_v0.png" class="logo-rotate" id="logo" alt="Logo">
+            </div>
+        </section>
+    </div>
+    <div class="sec">
+        <div class="translucent-background">
+            <div class="wrapper">
+                <div class="text-box">
+                    <h3>Welcome in Treashunt</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="background-Picture">
+            <div class="picture-treashunt">
+                <div class="grid-item">
+                    <img src="../media/forestchap1.png" alt="Forest">
+                    <div class="text-overlay">
+                        <h3>Aventure</h3>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="../media/beach.png" alt="Beach">
+                    <div class="text-overlay">
+                        <h3>Emotion</h3>
+                    </div>
+                </div>
+                <div class="grid-item large">
+                    <img src="../media/trader.png" alt="Trader">
+                    <div class="text-overlay">
+                        <h3>Histoire</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Story-content">
+        <div class="story-background">
+            <div class="story-header">
+                <h2>Bienvenue dans le monde de TreasHunt</h2>
+            </div>
+            <div class="story-content">
+                <div class="story-text">
+                    <p>Un jeu de parcours palpitant qui vous transporte dans un univers empreint de mystères et de défis captivants. Incarnez un jeune aventurier intrépide, fraîchement débarqué sur une île légendaire au cœur de l'océan, réputée pour abriter un volcan au caractère explosif. Dans cette aventure épique mais périlleuse, votre objectif sera : atteindre le sommet du volcan et mettre la main sur un trésor inestimable qui réserve des pouvoirs extraordinaires à ceux qui en sont dignes. Cependant, la route qui mène au sommet est loin d'être une promenade de santé. Vous devrez traverser d'épaisses forêts luxuriantes, gravir des montagnes escarpées et surmonter des épreuves redoutables. Chaque étape de votre parcours vous rapprochera du trésor tant convoité, mais il faudra user de votre intelligence, de votre agilité et de votre bravoure pour surmonter les obstacles qui se dresseront sur votre chemin.</p>
+                </div>
+                <div class="story-image">
+                    <img src="../media/dessin.png" alt="Volcano">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+
+
+
+
+    <section class="EndPage">
+        <div class="footer-container">
+            <ul class="footer-links">
+                <li class="footer-item">
+                    <a href="https://github.com/iboren" target="_blank">
+                        <img src="../media/github-logo.png" id="github-logo" alt="GitHub" class="footer-icon">
+                        GitHub
+                    </a>
+                </li>
+                <li class="footer-item">
+                    <a href="https://mail.google.com" target="_blank" class="contact-link">
+                        <img src="../media/contact-logo.png" id="contact-logo" alt="Contact" class="footer-icon">
+                        <span>Contactez-nous</span>
+                    </a>
+                </li>
+                <li class="footer-item">
+                    Made with <img src="../media/heart-logo.png" alt="Heart" class="footer-icon"> by Iboren
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    
+    
+    
+    <script>
+      window.addEventListener('scroll', function() {
+        const layers = document.querySelectorAll('.layer, .background-layer');
+        layers.forEach(layer => {
+            const speed = parseFloat(layer.getAttribute('data-speed'));
+            const yPos = -(window.pageYOffset * speed / 2);
+            layer.style.transform = `translateY(${yPos}px)`;
+        });
+
+        const scrollY = window.scrollY;
+
+        const sky = document.getElementById('sky');
+        if (sky) {
+            sky.style.top = `${scrollY * 1.6}px`;
+        }
+
+        const logo = document.getElementById('logo');
+        if (logo) {
+            const opacity = scrollY > 550 ? 0 : 1; // Ajustez cette valeur selon votre besoin
+            logo.style.top = `${scrollY *0.1}px`; // Ajustez cette valeur pour contrôler le déplacement vertical du logo
+            logo.style.opacity = opacity;
+        }
+    });
+        window.addEventListener('scroll', function() {
+            const textBox = document.querySelector('.text-box');
+            const textBoxPosition = textBox.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+
+            if (textBoxPosition < screenPosition) {
+                textBox.classList.add('reveal');
+                textBox.classList.add('visible');
+            }
+        });
+    </script>
+</body>
+</html>
