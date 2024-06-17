@@ -22,9 +22,6 @@
             margin-top: 0;
             padding-top: 0;
             overflow-x: hidden;
-           
-       
-
             backdrop-filter: blur(0px);
         }
          ::-webkit-scrollbar {
@@ -49,27 +46,19 @@
 
 </head>
 
-
-
 <body>
 
 
 
-    <section>
-        
-        <img src="media/mountain-about.png" id="mountain" alt="montagnes">
-        <img src="media/herbe.png" id="grass" alt="herbe">
-        <img src="media/nuage1.png" id="nuage1" alt="nuage1" >
-        <img src="media/nuage2.png" id="nuage2" alt="nuage2" >
-    </section>
-
-    <div class="sec" > <h4 class="title-police"> Réalisation</h4>  
-
-    <div class="partie-content"> <h3 class="texte-partie" id="real"> <div class="rect-real">Notre projet</div> </h3></div>
+    <div class="sec"> 
+       
+        <div class="repertory">
+            
+                Réalisation de Treashunt
+            
+        </div>
     
-
         <div class="process-wrapper">
-
             <div id="progress-bar-container">
                 <ul>
                     <li class="step step01 active"><div class="step-inner">Octobre</div></li>
@@ -83,36 +72,89 @@
                     <div id="line-progress"></div>
                 </div>
             </div>
-
+    
             <div id="progress-content-section">
                 <div class="section-content discovery active">
                     <h2>Octobre</h2>
-                    <p>debut du projet, redaction du cahier des charges, on réfléchît à quel jeu on va faire à travers plusieurs brainstorming lors de nos multiples appels etc</p>
+                    <p>Debut du projet, rédaction du cahier des charges, réflexion sur le jeu à travers plusieurs brainstormings lors de nos multiples appels, etc.</p>
                 </div>
                 
                 <div class="section-content strategy">
                     <h2>Janvier</h2>
-                    <p> premiere soutenance, on vend notre projet à un investisseur</p>
+                    <p>Première soutenance, présentation du projet à un investisseur.</p>
                 </div>
                 
                 <div class="section-content creative">
                     <h2>janvier/fevrier</h2>
-                    <p> c’est le charbon, chacun se met à fond dans a tache en vue de la prochaine soutenance en mars.</p>
+                    <p>Concentration maximale, chacun se consacre pleinement à sa tâche en vue de la prochaine soutenance en mars.</p>
                 </div>
                 
                 <div class="section-content production">
                     <h2>8 fevrier</h2>
-                    <p>c’est le drame, tout le développement du multijoueur version test de Paul se supprime suite à un charmant conflit git</p>
+                    <p>Drame : tout le développement de la version multijoueur de Paul se supprime suite à un conflit git charmant.</p>
                 </div>
                 
                 <div class="section-content analysis">
                     <h2>10 fevrier à 0h51</h2>
-                    <p>multijoueur version beta test opérationnel !</p>
+                    <p>Version bêta test du multijoueur opérationnelle !</p>
                 </div>
              
             </div>
         </div>
-</div>    
+ 
+    <div class="repertory">
+            
+        Réalisation du Site Web 
+    </div>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h2>Octobre 2023</h2>
+                <p>C'est à ce mois que j'ai initié un repository sur GitHub pour héberger le site web de Treashunt.</p>
+            </div>
+            <div class="timeline-image">
+                <img src="path/to/image1.jpg" alt="Image Octobre">
+            </div>
+        </div>
+
+        <div class="timeline-item alt">
+            <div class="timeline-image">
+                <img src="path/to/image2.jpg" alt="Image Janvier">
+            </div>
+            <div class="timeline-content">
+                <h2>Janvier 2023</h2>
+                <p>J'ai presque terminé la première version de la page d'accueil entièrement réalisée en HTML/CSS. Cette approche m'a permis d'acquérir une compréhension approfondie des bases du développement web.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h2>Mars 2023</h2>
+                <p>J'ai intégré mon premier effet parallax à la section "À propos" sans l'utilisation de bibliothèques JavaScript externes. Cela a nécessité la mise en place de gestionnaires d'événements et de transitions CSS pour créer un effet de défilement fluide.</p>
+            </div>
+            <div class="timeline-image">
+                <img src="path/to/image3.jpg" alt="Image Mars">
+            </div>
+        </div>
+
+        <div class="timeline-item alt">
+            <div class="timeline-image">
+                <img src="path/to/image4.jpg" alt="Image Juin">
+            </div>
+            <div class="timeline-content">
+                <h2>Juin 2023</h2>
+                <p>J'ai amélioré la page d'accueil en ajoutant un effet parallax et une animation GIF. L'animation a été entièrement créée à l'aide de clés d'animation CSS, ce qui a permis d'ajouter une dimension visuelle dynamique tout en maintenant la légèreté de la page.</p>
+            </div>
+        </div>
+
+        <div class="timeline-bar"></div> <!-- Barre de progression -->
+    </div>
+    
+    
+</div>
+    
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -153,42 +195,6 @@
 
     
    </script>
-
-    <script>
-    let mount = document.getElementById('mountain');
-    let grass = document.getElementById('grass');
-    let nuage1 = document.getElementById('nuage1');
-    let nuage2 = document.getElementById('nuage2');
-  
-    var largeurFenetre = window.innerWidth;
-
-    window.addEventListener('scroll', function() {
-
-        let valueY = window.scrollY;
-       
-        mount.style.top = valueY * 0.7 + 'px';
-        nuage1.style.left = valueY * 0.8 + largeurFenetre*0.16 + 'px';
-        nuage2.style.left = valueY * -0.8 + largeurFenetre*0.5 +'px';
-
-         
-        var title = document.querySelector('.title-police');
-        var opacity = valueY / 500; 
-
-        
-        opacity = Math.min(Math.max(opacity, 0), 1);
-
-        
-        title.style.opacity = opacity*1.8;
-
-        var brightness = 1 + (valueY); 
-
-        brightness = Math.min(Math.max(brightness, 0), 1);
-
-
-        title.style.filter = "brightness(" + brightness + ")";
-    });
-    
-    </script>
     <script>
         
         const revealText = document.querySelector('.texte-partie')
@@ -209,3 +215,4 @@
  
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </body>
+</html>
