@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="../style/style-about.css">
+    <title>Page de présentation de jeu</title>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/react-spring@9/dist/react-spring-web.cjs.production.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        
+        
+        body {
+            height: 400vh;
+            top: 0;
+            margin-top: 0;
+            padding-top: 0;
+            overflow-x: hidden;
+           
+       
+
+            backdrop-filter: blur(0px);
+        }
+         ::-webkit-scrollbar {
+            width: 10px;
+            height: 8px; 
+        }
+
+        ::-webkit-scrollbar-track {
+            background: linear-gradient(to right, #2c2c2c, #000000);
+        }
+       
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to right, #f0d605, #f3701a);
+            border-radius: 10px; /* Bords arrondis */
+        }
+     
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to right, #f7df6d, #f3701a);
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+
+    <section>
+        
+        <img src="media/mountain-about.png" id="mountain" alt="montagnes">
+        <img src="media/herbe.png" id="grass" alt="herbe">
+        <img src="media/nuage1.png" id="nuage1" alt="nuage1" >
+        <img src="media/nuage2.png" id="nuage2" alt="nuage2" >
+    </section>
+
+    <div class="sec" > <h4 class="title-police"> Réalisation</h4>  
+
+    <div class="partie-content"> <h3 class="texte-partie" id="real"> <div class="rect-real">Notre projet</div> </h3></div>
+    
+
+        <div class="process-wrapper">
+
+            <div id="progress-bar-container">
+                <ul>
+                    <li class="step step01 active"><div class="step-inner">Octobre</div></li>
+                    <li class="step step02"><div class="step-inner">Janvier</div></li>
+                    <li class="step step03"><div class="step-inner">janvier/fevrier</div></li>
+                    <li class="step step04"><div class="step-inner">8 fevrier</div></li>
+                    <li class="step step05"><div class="step-inner">10 fevrier à 0h51</div></li>
+                </ul>
+                
+                <div id="line">
+                    <div id="line-progress"></div>
+                </div>
+            </div>
+
+            <div id="progress-content-section">
+                <div class="section-content discovery active">
+                    <h2>Octobre</h2>
+                    <p>debut du projet, redaction du cahier des charges, on réfléchît à quel jeu on va faire à travers plusieurs brainstorming lors de nos multiples appels etc</p>
+                </div>
+                
+                <div class="section-content strategy">
+                    <h2>Janvier</h2>
+                    <p> premiere soutenance, on vend notre projet à un investisseur</p>
+                </div>
+                
+                <div class="section-content creative">
+                    <h2>janvier/fevrier</h2>
+                    <p> c’est le charbon, chacun se met à fond dans a tache en vue de la prochaine soutenance en mars.</p>
+                </div>
+                
+                <div class="section-content production">
+                    <h2>8 fevrier</h2>
+                    <p>c’est le drame, tout le développement du multijoueur version test de Paul se supprime suite à un charmant conflit git</p>
+                </div>
+                
+                <div class="section-content analysis">
+                    <h2>10 fevrier à 0h51</h2>
+                    <p>multijoueur version beta test opérationnel !</p>
+                </div>
+             
+            </div>
+        </div>
+</div>    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+ <script>
+            
+            $(".step").click( function() {
+            $(this).addClass("active").prevAll().addClass("active");
+            $(this).nextAll().removeClass("active");
+        });
+
+        $(".step01").click( function() {
+            $("#line-progress").css("width", "3%");
+            $(".discovery").addClass("active").siblings().removeClass("active");
+        });
+
+        $(".step02").click( function() {
+            $("#line-progress").css("width", "25%");
+            $(".strategy").addClass("active").siblings().removeClass("active");
+        });
+
+        $(".step03").click( function() {
+            $("#line-progress").css("width", "50%");
+            $(".creative").addClass("active").siblings().removeClass("active");
+        });
+
+        $(".step04").click( function() {
+            $("#line-progress").css("width", "75%");
+            $(".production").addClass("active").siblings().removeClass("active");
+        });
+
+        $(".step05").click( function() {
+            $("#line-progress").css("width", "100%");
+            $(".analysis").addClass("active").siblings().removeClass("active");
+        });
+
+
+    
+   </script>
+
+    <script>
+    let mount = document.getElementById('mountain');
+    let grass = document.getElementById('grass');
+    let nuage1 = document.getElementById('nuage1');
+    let nuage2 = document.getElementById('nuage2');
+  
+    var largeurFenetre = window.innerWidth;
+
+    window.addEventListener('scroll', function() {
+
+        let valueY = window.scrollY;
+       
+        mount.style.top = valueY * 0.7 + 'px';
+        nuage1.style.left = valueY * 0.8 + largeurFenetre*0.16 + 'px';
+        nuage2.style.left = valueY * -0.8 + largeurFenetre*0.5 +'px';
+
+         
+        var title = document.querySelector('.title-police');
+        var opacity = valueY / 500; 
+
+        
+        opacity = Math.min(Math.max(opacity, 0), 1);
+
+        
+        title.style.opacity = opacity*1.8;
+
+        var brightness = 1 + (valueY); 
+
+        brightness = Math.min(Math.max(brightness, 0), 1);
+
+
+        title.style.filter = "brightness(" + brightness + ")";
+    });
+    
+    </script>
+    <script>
+        
+        const revealText = document.querySelector('.texte-partie')
+
+        window.addEventListener('scroll', () => {
+
+            const { scrollTop, clientHeight} = document.documentElement;
+
+            const deltaTop = revealText.getBoundingClientRect().top;
+
+            if (scrollTop > (scrollTop + deltaTop).toFixed() *0.3) {
+                revealText.classList.add('active');
+            }
+        })
+    </script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+</body>

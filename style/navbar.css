@@ -1,0 +1,63 @@
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 1% 5%;
+    justify-content: space-between;
+    align-items: center;
+    z-index:  13;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-left: 10%;
+}
+
+header nav ul li a {
+    padding: 0.5vw 3vh; /* Increased padding for larger buttons */
+    color: #fff;
+    border-radius: 50px;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    font-size: 1.2em; /* Increased font size for better readability */
+    background: none;
+    font-family: cursive; /* Ensure no background color */
+}
+
+header nav ul li a:hover {
+    background: rgb(23, 153, 167); /* Highlight color on hover */
+    color: #000;
+    transform: scale(1.1); /* Slight scaling effect on hover */
+}
+
+header nav ul li a.active {
+    background: rgb(23, 153, 167);
+    color: #000;
+}
+
+.logo-container {
+    background-color: white; /* Background blanc derrière l'image */
+    padding: 1% 3vh;
+    border-radius: 10px;
+    width: 17%;
+    margin-left: -2%;
+    
+    
+}
+
+#ibo {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 10%;
+
+}
