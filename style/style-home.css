@@ -326,14 +326,15 @@ section {
     height: auto;
     z-index: 10;
     animation: race-bulle 16s linear infinite;
-    opacity: 0; /* Initial opacity set to 0 */
+    opacity: 0;
     transition: opacity 0.3s ease; 
-    z-index: 10000000000;
+    
 }
 
 .runner:hover ~ .bubble {
     opacity: 1; 
 }
+
 
 @keyframes race-bulle {
     from {
