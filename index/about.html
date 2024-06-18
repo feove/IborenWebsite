@@ -223,18 +223,18 @@
             }
         });
         window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    
+        const scrollY = window.scrollY;
             
-    const sky = document.getElementById('sky');
-    if (sky) {
-        sky.style.transform = `translateY(${scrollY * 0.4}px)`;
-    }
+            
+        const sky = document.getElementById('sky');
+        if (sky) {
+            sky.style.transform = `translateY(${scrollY * 0.4}px)`;
+        }
 
-    const plain = document.getElementById('plain');
-    if (plain) {
-        plain.style.transform = `translateY(${scrollY * 0}px)`;
-    }
+        const plain = document.getElementById('plain');
+        if (plain) {
+            plain.style.transform = `translateY(${scrollY * 0}px)`;
+        }
 });
 
             

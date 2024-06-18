@@ -35,11 +35,36 @@
         <div class="translucent-background">
             <div class="wrapper">
                 <div class="text-box">
-                    <h3>Welcome in Treashunt</h3>
+                    <h3>Bienvenue dans Treashunt</h3>
                 </div>
             </div>
         </div>
 
+        <div class="video-container">
+            <div class="text-left">
+                <p>N<br>O<br>T<br>R<br>E</p>
+                
+            </div>
+            <div class="video-frame">
+                <video width="1080" height="720" controls autoplay loop muted>
+                    <source src="media/TrailerTrashunt.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="text-right">
+                <p>T<br>R<br>A<br>I<br>L<br>E<br>R</p>
+                
+            </div>
+        </div>
+        
+        
+
+
+        <div class="animated-title">
+            <h1>Partez à l'aventure !</h1>
+        </div>
+        
+        
         <div class="background-Picture">
             <div class="picture-treashunt">
                 <div class="grid-item">
@@ -66,7 +91,7 @@
     <div class="Story-content">
         <div class="story-background">
             <div class="story-header">
-                <h2>Bienvenue dans le monde de TreasHunt</h2>
+                <h2>Qu'est ce que TreasHunt ?</h2>
             </div>
             <div class="story-content">
                 <div class="story-text">
@@ -146,6 +171,17 @@
                 textBox.classList.add('visible');
             }
         });
+
+        window.addEventListener('scroll', function() {
+    const animatedTitle = document.querySelector('.animated-title');
+    const titlePosition = animatedTitle.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.3;
+
+    if (titlePosition < screenPosition) {
+        animatedTitle.classList.add('visible');
+    }
+});
+
     </script>
 </body>
 </html>
