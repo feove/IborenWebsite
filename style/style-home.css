@@ -237,7 +237,7 @@ section {
         font-size: 2em;
     }
 }
-/* Ajout des animations */
+
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -259,7 +259,6 @@ section {
     }
 }
 
-/* Ajout des animations */
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -280,7 +279,7 @@ section {
         opacity: 1;
     }
 }
-/* Ajout des animations */
+
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -310,6 +309,64 @@ section {
     100% { transform: translateX(0); }
 }
 
+.runner {
+    position: absolute;
+    margin-top: -2%;
+    left: 9%;
+    width: 7%;
+    height: auto;
+    animation: race-runner 16s linear infinite;
+}
+
+.bubble {
+    margin-top: -5.5%;
+    margin-left: 3%;
+    position: absolute;
+    width: 12%;
+    height: auto;
+    z-index: 10;
+    animation: race-bulle 16s linear infinite;
+    opacity: 0; /* Initial opacity set to 0 */
+    transition: opacity 0.3s ease; 
+    z-index: 10000000000;
+}
+
+.runner:hover ~ .bubble {
+    opacity: 1; 
+}
+
+@keyframes race-bulle {
+    from {
+        left: 0%;
+    }
+    50% {
+        left: 80%;
+    }
+    51% {
+        /* no changes needed */
+    }
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes race-runner {
+    from {
+        left: 0%;
+        transform: scaleX(1);
+    }
+    50% {
+        left: 80%;
+        transform: scaleX(1);
+    }
+    51% {
+        transform: scaleX(-1);
+    }
+    to {
+        transform: scaleX(-1);
+        left: 0%;
+    }
+}
 
 .footer-container {
     background: linear-gradient(135deg, #0d4e4d 0%, #1c5248 100%);
@@ -318,6 +375,7 @@ section {
     text-align: center;
     position: relative;
     overflow: hidden;
+    margin-top: 5%;
 }
 
 .footer-links {
@@ -393,8 +451,9 @@ section {
 }
 /* ------------------------------------------- */
 .Story-content {
-    background-color: #f0f0f0;
-    padding: 50px 0;
+    background-color: #ffffff;
+    padding: 3% 0;
+    
 }
 
 .story-background {
@@ -403,16 +462,16 @@ section {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 10px 20px rgba(210, 210, 210, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.691);
 }
 
 .story-header {
     text-align: center;
-    margin-bottom: 20px; 
+    margin:3% 0; 
 }
 
 .story-header h2 {
-    font-size: 2.5em;
+    font-size: 2.8em;
     color: #333;
 }
 
@@ -426,14 +485,15 @@ section {
 .story-text {
     flex: 1;
     text-align: justify;
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-right: 20px;
-    margin-bottom: 0; 
+    font-size: 1.4em;
+    line-height: 1.5;
+   
+   
 }
 
 .story-text p {
-    margin: 0;
+    margin-right: 3%;
+ 
     color: #333;
 }
 
@@ -441,17 +501,18 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    
     flex: 1;
 }
 
 .story-image img {
-    max-width: 100%;
+    max-width: 80%;
     max-height: 80vh;
     height: auto;
     border-radius: 15px;
     box-shadow: 0 5px 10px;
     object-fit: contain; 
+   
 }
 
 @media (max-width: 768px) {

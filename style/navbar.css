@@ -38,13 +38,13 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    background: rgb(23, 153, 167); /* Highlight color on hover */
-    color: #000;
+    background: rgb(255, 255, 255); /* Highlight color on hover */
+    color: #000000;
     transform: scale(1.1); /* Slight scaling effect on hover */
 }
 
 header nav ul li a.active {
-    background: rgb(23, 153, 167);
+    background: rgb(71, 161, 191);
     color: #000;
 }
 

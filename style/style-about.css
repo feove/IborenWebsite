@@ -13,24 +13,23 @@ p{
 }
 
 .band {
-    position: absolute; /* Assurez-vous que l'élément est positionné correctement */
+    position: absolute; 
     left: -10%;
     margin-left: -5.2%;
     margin-top: -2%;
     width: 200%;
     height: 10vh;
-    background: linear-gradient(135deg, rgba(88, 200, 153, 0.6), rgba(45, 140, 85, 0.6)); /* Dégradé de couleurs */
-    z-index: 9999; /* Réduire le nombre de z-index pour éviter des valeurs excessives */
+    background: linear-gradient(135deg, rgba(88, 200, 153, 0.6), rgba(45, 140, 85, 0.6)); 
+    z-index: 9999; 
     margin-bottom: -3%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ajoute une ombre portée pour la profondeur */
-    backdrop-filter: blur(10px); /* Ajoute un flou */
-    transition: all 0.3s ease; /* Transition pour des effets de changement lisses */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease; 
 }
 
 
-/* Optionnel: Ajouter des styles de survol pour plus d'interactivité */
 .band:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Accentuer l'ombre portée au survol */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     transform: scale(1.01); /* Légère mise à l'échelle pour un effet de survol */
 }
 
