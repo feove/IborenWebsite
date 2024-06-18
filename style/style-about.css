@@ -1,3 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Oswald, sans-serif;
+    
+    
+}
+p{
+    font-family: 'Bogart', sans-serif;
+}
+
+.band {
+    position: absolute; /* Assurez-vous que l'élément est positionné correctement */
+    left: -10%;
+    margin-left: -5.2%;
+    margin-top: -2%;
+    width: 200%;
+    height: 10vh;
+    background: linear-gradient(135deg, rgba(88, 200, 153, 0.6), rgba(45, 140, 85, 0.6)); /* Dégradé de couleurs */
+    z-index: 9999; /* Réduire le nombre de z-index pour éviter des valeurs excessives */
+    margin-bottom: -3%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ajoute une ombre portée pour la profondeur */
+    backdrop-filter: blur(10px); /* Ajoute un flou */
+    transition: all 0.3s ease; /* Transition pour des effets de changement lisses */
+}
+
+
+/* Optionnel: Ajouter des styles de survol pour plus d'interactivité */
+.band:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Accentuer l'ombre portée au survol */
+    transform: scale(1.01); /* Légère mise à l'échelle pour un effet de survol */
+}
+
 
 .repertory {
     position: relative;
@@ -21,6 +57,7 @@
     z-index: 3;
     top: 10%;
     margin: 13% 8% ;
+   
 }
 
 @media (max-width: 768px) {
@@ -66,15 +103,31 @@ section img {
 
 }
 .sec {
-    position:relative;
-    top: 50%;
+    position: relative;
+    top: -1%;
     padding: 0;
-    background-color: #45884d;
+    background: linear-gradient(135deg, #4b8652, #457b4b); 
     height: 80%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    overflow: hidden; 
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;  
 }
 
-/*-----------------------------------------------------*/
-
+.sec::before {
+    content: '';
+    position: absolute;
+    top: -0.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 3vh;
+    background: linear-gradient(135deg, #ffffff, #eeeeee); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, ;
+    opacity: 0.8;
+    
+}
 /* --- Start progress bar --- */
 
 .process-wrapper {
@@ -506,7 +559,7 @@ section img {
     order: 2;
     margin-right: 10%;
     margin-left: 15%;
-    padding: 1% 0;
+    padding: 0.5% 0;
 }
 
 .timeline-item:nth-child(even) .timeline-image {
@@ -519,7 +572,7 @@ section img {
 .timeline-item .timeline-content p {
     margin: 0;
     width: 90%;
-    padding: 4% 0;
+    padding: 2% 0;
 }
 
 .timeline-item .timeline-image img {
@@ -560,7 +613,6 @@ section img {
 /* ---------------------------------FRIENDS-------------------------------------------------x */
 
 
-
 .friends-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -574,7 +626,7 @@ section img {
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition:  box-shadow 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     text-align: center;
     font-size: 1.5rem;
     line-height: 1.5;
@@ -582,12 +634,34 @@ section img {
 }
 
 .friend-item:hover {
-   
+    transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .friend-item h3 {
     margin-top: 0;
+    font-size: 1.9rem; /* Ajustez la taille du texte selon vos besoins */
+    color: #ffffff;
+    background: linear-gradient(to right, #127b30, #7ac364);
+    padding: 10px;
+    border-radius: 8px;
+    text-shadow: 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
+    /* animation: textGlow 4s ease-in-out infinite;  */
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 1px #fff, 0 0 1px #fdfdfd, 0 0 1px #b8b8b8, 0 0 1px #f6f6f6, 0 0 1px #969696, 0 0 1px #b3b3b3, 0 0 1px #ffffff;
+    }
+    50% {
+        text-shadow: 0 0 1px #fff, 0 0 3px #fdfdfd, 0 0 1px #b8b8b8, 0 0 3px #f6f6f6, 0 0 3px #969696, 0 0 1px #b3b3b3, 0 0 3px #ffffff;
+    }
+    53% {
+        text-shadow: 0 0 1px #fff, 0 0 2px #fdfdfd, 0 0 1px #b8b8b8, 0 0 2px #f6f6f6, 0 0 2px #969696, 0 0 1px #b3b3b3, 0 0 3px #ffffff;
+    }
+    100% {
+        text-shadow: 0 0 1px #fff, 0 0 1px #fdfdfd, 0 0 1px #b8b8b8, 0 0 1px #f6f6f6, 0 0 1px #969696, 0 0 1px #b3b3b3, 0 0 1px #ffffff;
+    }
 }
 
 .friend-content {
@@ -598,18 +672,98 @@ section img {
     align-items: center;
     justify-content: center;
     overflow: hidden; /* Pour recadrer le contenu qui dépasse */
+    border-radius: 12px; /* Bords arrondis pour le conteneur d'image */
 }
 
 .friend-content img {
-    width: 80%; /* La largeur de l'image sera de 100% du conteneur */
-    height: 130%; /* La hauteur de l'image sera de 100% du conteneur */
-    object-fit: cover; /* Assure le recadrage de l'image */
-    
-   
+    width: 90%; 
+    height: 80%; 
+    object-fit: cover; 
+    border-radius: 12px; 
+    border: 5px solid #fff; 
     transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .friend-content img:hover {
     transform: scale(1.05) rotate(2deg);
-    border-color: #ffffff;
+    border-color: #7a7c7c00;
+}
+
+.friend-content .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.friend-content:hover .overlay {
+    opacity: 1;
+}
+
+.repertory {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* -------------------------------------------- */
+.parallax {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.parallax .background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../media/Forestpt1.png') no-repeat center center;
+    background-size: cover;
+    z-index: -1; 
+}
+
+.parallax .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    will-change: transform; /* Optimisation des performances */
+}
+
+#plain {
+    z-index: 2; 
+    top: -5%;
+}
+
+#sky {
+    z-index: 0; 
+    width: 100%; 
 }

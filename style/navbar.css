@@ -1,6 +1,7 @@
 
 
 header {
+   
     text-decoration: none;
 	list-style: none;
     position: fixed;
@@ -12,7 +13,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index:  13;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 header nav ul {
@@ -26,13 +27,14 @@ header nav ul li {
 }
 
 header nav ul li a {
-    padding: 0.5vw 3vh; /* Increased padding for larger buttons */
+    padding: 0.5vw 3vh;
     color: #fff;
     border-radius: 50px;
-    transition: background 0.3s, color 0.3s, transform 0.3s;
-    font-size: 1.2em; /* Increased font size for better readability */
+    
+    font-size: 1.3em;
     background: none;
-    font-family: cursive; /* Ensure no background color */
+    font-family: 'Bogart', sans-serif;
+    font-weight: 550;
 }
 
 header nav ul li a:hover {
@@ -62,4 +64,19 @@ header nav ul li a.active {
     border-radius: 10px;
     margin-left: 10%;
 
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 8px; 
+}
+::-webkit-scrollbar-track {
+    background: linear-gradient(to right, #2c2c2c, #000000);
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #f0d605, #f3701a);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to right, #f7df6d, #f3701a);
 }
