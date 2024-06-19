@@ -43,24 +43,22 @@
         <div class="video-container">
             <div class="text-left">
                 <p>N<br>O<br>T<br>R<br>E</p>
-                
             </div>
-            <div class="video-container">
-                <div class="video-frame">
-                    <div id="player"></div>
+             
+            <div class="video-frame">
+                <div id="player">
+           
                 </div>
-            </div>
             </div>
             <div class="text-right">
                 <p>T<br>R<br>A<br>I<br>L<br>E<br>R</p>
-                
             </div>
+           
         </div>
         
-        
 
 
-        <div class="animated-title">
+        <div class="animated-title" style="margin-top: 50%;">
             <h1>Partez à l'aventure !</h1>
         </div>
         
@@ -157,7 +155,7 @@
         const logo = document.getElementById('logo');
         if (logo) {
             const opacity = scrollY > 550 ? 0 : 1; 
-            logo.style.top = `${scrollY *0.1}px`; 
+            //rotate the logo on itself
             logo.style.opacity = opacity;
         }
     });
@@ -183,18 +181,20 @@
 });
     </script>
     <script>
-       var tag = document.createElement('script');
+     
+           
+        var tag = document.createElement('script');
         tag.src = "https://www.youtube.com/iframe_api";
         var firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-        // 2. Create an <iframe> (and YouTube player) after the API code downloads.
+       
         var player;
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('player', {
-                height: '720',
-                width: '1080',
-                videoId: 'hZgV6ss62sE', // Your video ID
+                height: '390',
+                width: '640',
+                videoId: 'hZgV6ss62sE',
                 events: {
                     'onReady': onPlayerReady,
                     'onStateChange': onPlayerStateChange
@@ -202,12 +202,12 @@
             });
         }
 
-        // 3. The API will call this function when the video player is ready.
+       
         function onPlayerReady(event) {
             event.target.playVideo();
         }
 
-        // 4. The API calls this function when the player's state changes.
+     
         var done = false;
         function onPlayerStateChange(event) {
             if (event.data == YT.PlayerState.PLAYING && !done) {
@@ -217,6 +217,7 @@
         function stopVideo() {
             player.stopVideo();
         }
+
     </script>
 </body>
 </html>
