@@ -529,7 +529,7 @@ section {
 
 /* ---------------------VIDEO------------------------------- */
 .video-container {
-    margin-left: -5%;
+    margin-left: 5%;
     display: grid;
     grid-template-columns: 1fr auto 1fr; /* Une colonne pour chaque texte et une pour la vidéo */
     gap: 20px;
@@ -538,7 +538,6 @@ section {
     text-align: center;
     align-items: center; /* Centre les éléments verticalement */
 }
-
 .text-left, .text-right {
     display: flex;
     justify-content: center;
@@ -546,7 +545,6 @@ section {
     font-size: 3em;
     color: #dedede;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-   
 }
 
 .video-frame {
@@ -554,7 +552,6 @@ section {
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-
     margin: 0 5%;
 }
 
