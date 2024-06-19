@@ -4,12 +4,26 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    font-family: Oswald, sans-serif;
+    /* font-family: Oswald, sans-serif; */
     
     
 }
 p{
     font-family: 'Bogart', sans-serif;
+}
+
+.progress-image {
+    display: block; 
+    margin: 0 auto; 
+    border-radius: 10px; 
+    border: 3px solid #000000; 
+    max-width: 100%; 
+    transition: transform 0.3s ease, border-color 0.3s ease; 
+}
+
+.progress-image:hover {
+    transform: scale(1.05);
+    border-color: #ffffff; 
 }
 
 .band {
@@ -30,7 +44,7 @@ p{
 
 .band:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    transform: scale(1.01); /* Légère mise à l'échelle pour un effet de survol */
+    transform: scale(1.01); 
 }
 
 
@@ -61,13 +75,13 @@ p{
 
 @media (max-width: 768px) {
     .repertory {
-        font-size: 4vw; /* Adjust font size for smaller screens */
+        font-size: 4vw; 
     }
 }
 
 @media (max-width: 480px) {
     .repertory {
-        font-size: 5vw; /* Further adjust font size for smaller screens */
+        font-size: 5vw;
     }
 }
 
@@ -199,6 +213,8 @@ section img {
     justify-content: space-between;
 }
 
+
+
 .timeline-item .timeline-circle {
     position: absolute;
     width: 20px;
@@ -230,7 +246,9 @@ section img {
     text-align: center;
     font-size: 1.5rem;
     line-height: 1.2; 
+    font-family: 'Bogart', sans-serif;
 }
+
 
 .timeline-item:nth-child(odd) .timeline-content {
     order: 1;
@@ -444,7 +462,7 @@ section img {
     max-width: 95%;
     margin: 0 auto;
     top: 10%;
-    font-family: 'Bogart', sans-serif; /* Utilisation de la police cursive */
+    font-family: 'Bogart', sans-serif; 
 }
 
 .timeline-bar {
@@ -610,8 +628,7 @@ section img {
     }
 }
 
-/* ---------------------------------FRIENDS-------------------------------------------------x */
-
+/* ---------------------------------FRIENDS------------------------------------------------- */
 
 .friends-box {
     display: grid;
@@ -630,7 +647,7 @@ section img {
     text-align: center;
     font-size: 1.5rem;
     line-height: 1.5;
-    height: 60vh; /* Ajustez la hauteur selon vos besoins */
+    height: 60vh; 
 }
 
 .friend-item:hover {
@@ -640,13 +657,13 @@ section img {
 
 .friend-item h3 {
     margin-top: 0;
-    font-size: 1.9rem; /* Ajustez la taille du texte selon vos besoins */
+    font-size: 1.9rem; 
     color: #ffffff;
     background: linear-gradient(to right, #127b30, #7ac364);
     padding: 10px;
     border-radius: 8px;
     text-shadow: 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
-    /* animation: textGlow 4s ease-in-out infinite;  */
+
 }
 
 @keyframes textGlow {
@@ -667,12 +684,12 @@ section img {
 .friend-content {
     position: relative;
     width: 100%;
-    height: 80%; /* Ajustez la hauteur selon vos besoins */
+    height: 80%; 
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Pour recadrer le contenu qui dépasse */
-    border-radius: 12px; /* Bords arrondis pour le conteneur d'image */
+    overflow: hidden; 
+    border-radius: 12px; 
 }
 
 .friend-content img {
@@ -698,6 +715,7 @@ section img {
     background-color: rgba(0, 0, 0, 0.6);
     color: #ffffff;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     opacity: 0;
@@ -707,15 +725,50 @@ section img {
     text-align: center;
 }
 
-.friend-content .overlay p{
-
+.friend-content .overlay p {
     font-size: 1.2rem;
-} 
+}
+
+.friend-content .overlay .icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px; 
+}
+
+.friend-content .overlay .icons img {
+    width: 3vw; 
+    height: auto;
+    transition: transform 0.3s ease;
+    background-color: rgb(255, 255, 255);
+}
+
+.friend-content .overlay .icons img:hover {
+    transform: scale(1.2);
+}
 
 .friend-content:hover .overlay {
     opacity: 1;
 }
 
+.role {
+    top: -21%;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background: linear-gradient(to right, #1f7138, #2f7d18);
+    padding: 10px;
+    border-radius: 8px;
+    text-shadow: 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.role:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ----------------------------------------------------------------------------- */
 .repertory {
     font-size: 2.5rem;
     text-align: center;

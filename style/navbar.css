@@ -1,19 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-
+/* Styles pour le header */
 header {
-   
     text-decoration: none;
-	list-style: none;
+    list-style: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
-    padding: 1% 5%;
+    padding: 1% 2%;
     justify-content: space-between;
     align-items: center;
-    z-index:  13;
-    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 13;
+    background-color: rgba(0, 0, 0, 0.297);
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    font-weight: 500;
 }
 
 header nav ul {
@@ -23,60 +26,59 @@ header nav ul {
 }
 
 header nav ul li {
-    margin-left: 10%;
+    margin-left: 10px;
 }
 
 header nav ul li a {
-    padding: 0.5vw 3vh;
+    padding: 10px 20px;
     color: #fff;
     border-radius: 50px;
-    
-    font-size: 1.3em;
-    background: none;
-    font-family: 'Bogart', sans-serif;
-    font-weight: 550;
+    font-size: 1.1em;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 header nav ul li a:hover {
-    background: rgb(255, 255, 255); /* Highlight color on hover */
-    color: #000000;
-    transform: scale(1.1); /* Slight scaling effect on hover */
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    transform: scale(1.05);
 }
 
 header nav ul li a.active {
-    background: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     color: #000;
 }
 
 .logo-container {
-    background-color: white; /* Background blanc derrière l'image */
-    padding: 1% 3vh;
+    background-color: white;
+    padding: 8px 15px;
     border-radius: 10px;
     width: 17%;
-    margin-left: -2%;
-    
-    
 }
 
 #ibo {
-    width: 80%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
-    margin-left: 10%;
-
+    margin-left: 10px;
 }
 
 ::-webkit-scrollbar {
     width: 10px;
-    height: 8px; 
+    height: 8px;
 }
+
 ::-webkit-scrollbar-track {
     background: linear-gradient(to right, #2c2c2c, #000000);
 }
+
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(to right, #f0d605, #f3701a);
     border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(to right, #f7df6d, #f3701a);
 }
+
