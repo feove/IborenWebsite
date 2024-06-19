@@ -176,6 +176,7 @@ section img {
     margin: 0 auto;
     top: 10%;
     font-family: cursive; 
+
 }
 
 .timeline-bar {
@@ -206,7 +207,7 @@ section img {
     border-radius: 50%;
     left: 50%;
     margin-left: -10px;
-    z-index: 1;
+    
 }
 
 .timeline-item .timeline-content,
@@ -705,6 +706,11 @@ section img {
     border-radius: 12px;
     text-align: center;
 }
+
+.friend-content .overlay p{
+
+    font-size: 1.2rem;
+} 
 
 .friend-content:hover .overlay {
     opacity: 1;
