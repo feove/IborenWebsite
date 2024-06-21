@@ -36,7 +36,7 @@
                 <div class="background-layer" data-speed="5"></div>
                 <img src="media/Forestpt1.png" class="layer" id="plain" data-speed="0">
                 <img src="media/Forestpt2.png" class="layer" id="sky" data-speed="2">
-                <img src="media/logo_v0.png" class="logo-rotate" id="logo" alt="Logo">
+                <a href="index/download.html"><img src="media/logo_v0.png" class="logo-rotate" id="logo" alt="Logo"></a>
             </div>
         </section>
     </div>
@@ -165,7 +165,7 @@
     
         const initialTopPercent = 18;
         const initialTopPixels = (initialTopPercent / 100) * window.innerHeight;
-        const newTopPixels = initialTopPixels - scrollY ;
+        const newTopPixels = initialTopPixels - scrollY *1.5 ;
 
         logo.style.top = `${newTopPixels}px`;
         logo.style.opacity = opacity;
@@ -229,17 +229,8 @@
         function stopVideo() {
             player.stopVideo();
         }
-
-     
-    // Création de l'élément du curseur personnalisé
-    const cursor = document.createElement('div');
-    cursor.className = 'custom-cursor';
-    document.body.appendChild(cursor);
-
-    // Écouteur pour suivre la position de la souris
-    document.addEventListener('mousemove', e => {
-        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-    });
+ 
+   
 
 
     </script>

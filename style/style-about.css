@@ -647,7 +647,7 @@ section img {
     text-align: center;
     font-size: 1.5rem;
     line-height: 1.5;
-    height: 60vh; 
+    height: 70vh; 
 }
 
 .friend-item:hover {
@@ -694,8 +694,9 @@ section img {
 
 .friend-content img {
     width: 90%; 
-    height: 80%; 
+    height: 70%; 
     object-fit: cover; 
+    margin-top: -15%;
     border-radius: 12px; 
     border: 5px solid #fff; 
     transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
@@ -729,20 +730,28 @@ section img {
     font-size: 1.2rem;
 }
 
-.friend-content .overlay .icons {
+
+.friend-content  .icons {
+    position: absolute;
     display: flex;
     gap: 10px;
-    margin-top: 10px; 
+    margin-top: 105%; 
+    margin-left: 0%;
+    z-index: 99999999;
+    
 }
 
-.friend-content .overlay .icons img {
-    width: 3vw; 
+.friend-content .icons img {
+    width: 3.2vw; 
     height: auto;
     transition: transform 0.3s ease;
     background-color: rgb(255, 255, 255);
+    border: solid 0.08em;
+    border-color: #00000094;
+
 }
 
-.friend-content .overlay .icons img:hover {
+.friend-content  .icons img:hover {
     transform: scale(1.2);
 }
 
@@ -751,7 +760,7 @@ section img {
 }
 
 .role {
-    top: -21%;
+    top: -25%;
     font-size: 1.5rem;
     color: #ffffff;
     background: linear-gradient(to right, #1f7138, #2f7d18);
