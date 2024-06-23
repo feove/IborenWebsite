@@ -5,7 +5,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    /* font-family: 'Bogart', sans-serif; */
+    /*  */
 }
 
 body {
@@ -99,6 +99,7 @@ body {
     background-color: rgba(92, 92, 92, 0.269); 
     border-radius: 10px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+   
 }
 
 .box-download {
@@ -110,20 +111,19 @@ body {
     width: 100%;
     z-index: 5;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .pdf {
     justify-content: center;
-    width: 100%;
+    width: 120%;
     background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 70%, rgba(198, 198, 198, 0.5) 100%), rgb(59, 100, 108);
     border-radius: 20px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
     padding: 3%;
+
     margin-top: 15%;
-    max-width: 1200px;
-    margin-left: 10%;
-    margin-right: 10%;
+    
 }
 
 .grid-container {
