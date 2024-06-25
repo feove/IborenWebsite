@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-/* Styles pour le header */
+
 header {
     text-decoration: none;
     list-style: none;
@@ -13,11 +13,11 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 13;
-    background-color: rgba(0, 0, 0, 0.297);
-    font-family: 'Ubuntu', sans-serif;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    font-weight: 200;
-    /* font-family: 'Bogart', sans-serif; */
+    background-color: rgba(131, 131, 131, 0.454); 
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 300; 
+    color: #000; 
+    border-radius: 15px; 
 }
 
 header nav ul {
@@ -31,11 +31,11 @@ header nav ul li {
 }
 
 header nav ul li a {
-    padding: 10px 20px;
+    padding: 12px 24px; 
     color: #fff;
-    border-radius: 50px;
+    border-radius: 15px; 
     font-size: 1.1em;
-    font-weight: 800;
+    font-weight: 700; 
     text-transform: uppercase;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
@@ -49,6 +49,11 @@ header nav ul li a:hover {
 header nav ul li a.active {
     background-color: rgb(255, 255, 255);
     color: #000;
+}
+
+
+header nav ul li a:not(:hover) {
+    background-color: rgba(71, 173, 100, 0.813); 
 }
 
 .logo-container {
@@ -83,3 +88,14 @@ header nav ul li a.active {
     background: linear-gradient(to right, #f7df6d, #f3701a);
 }
 
+.a-nav {
+    margin: 0;
+    background: var(--primary);
+    color: var(--text);
+    display: inline-block;
+    border-radius: 15px; 
+    padding: 12px 24px; 
+    box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    transition: background 0.3s;
+}

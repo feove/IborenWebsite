@@ -38,9 +38,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="../index.html" class="a-style" style="text-decoration-line: none;" >Accueil</a></li>
-                <li><a href="download.html" class="a-style" style="text-decoration-line: none;" >Téléchargement</a></li>
-                <li><a href="about.html"   style="text-decoration-line: none;" class="active a-style">A propos</a></li>
+                <li><a href="../index.html"  style="text-decoration-line: none;" class="a-nav" >Accueil</a></li>
+                <li><a href="download.html"  style="text-decoration-line: none;" class="a-nav" >Téléchargement</a></li>
+                <li><a href="about.html"   style="text-decoration-line: none;" class="a-nav active">A propos</a></li>
             </ul>
         </nav>
     </header>
@@ -108,16 +108,16 @@
                 
                 <div class="overlay">
                     <p>J'ai conçu le level design, développé le scénario, et géré les assets graphiques pour créer des
-                         environnements immersifs et une histoire captivante.</p>
-                   
+                        environnements immersifs et une histoire captivante.</p>
+                        
+                    </div>
+                    
+                    <div class="icons" >
+                        <a href="https://discord.com/users/"><img src="../media/icon-discord.png" alt="Discord"></a>
+                        <a href="https://www.linkedin.com/in/baptiste-marx-37b173294/"><img src="../media/icon-linkedin.png" alt="Linkedin"></a>
+             
+                    </div>
                 </div>
-                <div class="icons">
-                    <a href="https://discord.com/users/"><img src="../media/icon-discord.png" alt="Discord"></a>
-                    <a href="https://www.linkedin.com/in/baptiste-marx-37b173294/"><img src="../media/icon-linkedin.png" alt="Linkedin"></a>
-         
-                </div>
-                
-            </div>
            
             <p class="role">Directeur artistique</p>
         </div>
@@ -178,9 +178,9 @@
       <div class="date date--right">Octobre 2023</div>
       <div class="timeline-content js--fadeInLeft">
         <img src="../media/GithubContent.png" class="timeline-img">
-        <h2>Title</h2>
+        <h2 >L'hébergement du site</h2>
         <p>C'est à ce mois que j'ai initié un repository sur GitHub pour héberger le site web de Treashunt.</p>
-        <a class="bnt-more a-style" href="javascript:void(0)">More</a>
+        <a class="bnt-more a-style" href="javascript:void(0)">Plus</a>
       </div>
     </div>
   
@@ -189,9 +189,9 @@
       <div class="date date--left">Janvier 2023</div>
       <div class="timeline-content js--fadeInRight">
         <img src="../media/prototypeWebsite.png" class="timeline-img">
-        <h2>Title</h2>
+        <h2>Le premier design</h2>
         <p>J'ai presque terminé la première version de la page d'accueil entièrement réalisée en HTML/CSS. Cette approche m'a permis d'acquérir une compréhension approfondie des bases du développement web.</p>
-        <a class="bnt-more a-style" href="javascript:void(0)">More</a>
+        <a class="bnt-more a-style" href="javascript:void(0)">Plus</a>
       </div>
     </div>
   
@@ -200,9 +200,9 @@
       <div class="date date--right">Mars 2023</div>
       <div class="timeline-content js--fadeInLeft">
         <img src="../media/gif-website.gif" class="timeline-img">
-        <h2>Title</h2>
+        <h2>L'effet parallax</h2>
         <p>J'ai intégré mon premier effet parallax à la section "À propos" sans l'utilisation de bibliothèques JavaScript externes. Cela a nécessité la mise en place de gestionnaires d'événements et de transitions CSS pour créer un effet de défilement fluide.</p>
-        <a class="bnt-more a-style" href="javascript:void(0)">More</a>
+        <a class="bnt-more a-style" href="javascript:void(0)">Plus</a>
       </div>
     </div>
   
@@ -211,9 +211,9 @@
       <div class="date date--left">Juin 2023</div>
       <div class="timeline-content js--fadeInRight">
         <img src="../media/HomePage.png" class="timeline-img">
-        <h2>Title</h2>
+        <h2>Remastérisation</h2>
         <p>J'ai amélioré la page d'accueil afin de la rendre plus simple et moderne à l'aide de nouveau effet fait en javascript</p>
-        <a class="bnt-more a-style" href="javascript:void(0)">More</a>
+        <a class="bnt-more a-style" href="javascript:void(0)">Plus</a>
       </div>
     </div>
   </section>
@@ -286,6 +286,10 @@
     
     </script>
    <script src="https://unpkg.com/scrollreveal"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+       
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
    <script>
        $(function() {
         
@@ -329,12 +333,28 @@
                });
            });
        });
+       $(function() {
+            function updateTimelineBar() {
+                var scrollPercentage = (window.scrollY / (document.body.clientHeight - window.innerHeight)) * 100;
+                var filledHeight = Math.min(scrollPercentage, 95); // Limite à 95% de hauteur remplie
+
+                $('.timeline::before').css('height', filledHeight + '%');
+            }
+
+            // Appel initial et écouteur d'événement sur le scroll
+            $(window).on('scroll', function() {
+                updateTimelineBar();
+            });
+
+            // Appel initial pour mettre à jour la barre au chargement de la page
+            updateTimelineBar();
+        });
+
    </script>
    
    
    
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
 </body>
 </html>
