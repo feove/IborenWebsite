@@ -7,11 +7,23 @@
     list-style: none;
     box-sizing: border-box;
     /* font-family: Oswald, sans-serif; */
-    
+    text-decoration: none;
+    list-style: none;
     
 }
+
+body {
+    height: 800vh;
+    margin: 0;
+    
+    overflow-x: hidden;
+    text-decoration: none;
+    list-style: none;
+}
+
 p{
     font-family: 'Bogart', sans-serif;
+    
 }
 
 .progress-image {
@@ -144,6 +156,7 @@ p{
     position:absolute;
     width:100%;
     margin-top:-10px;
+    
 }
 
 #progress-bar-container li:before {
@@ -448,7 +461,6 @@ p{
     --primary: #acaebb;
     --dark-primary: #303F9F;
     --light-primary: #C5CAE9;
-    --text: #FFFFFF;
     --primary-text: #212121;
     --secondary-text: #757575;
     --timeline-circle-gradient: linear-gradient(135deg, #6DD5FA, #FFFFFF); 
@@ -699,7 +711,7 @@ h1 {
 .a-style {
     margin: 0;
     background: var(--primary);
-    color: var(--text);
+    color: #FFFFFF;
     display: inline-block;
     border-radius: 5px;
     padding: 10px 20px;
@@ -729,7 +741,7 @@ h1 {
 }
 
 .timeline-img-header h2 {
-    color: var(--text);
+    color: #FFFFFF;
     position: absolute;
     bottom: 5px;
     left: 20px;
@@ -974,12 +986,6 @@ blockquote {
 
 
 /* ----------------------------------------------------------------------------- */
-.repertory {
-    font-size: 2.5rem;
-    text-align: center;
-    
-    animation: fadeIn 2s ease-in-out;
-}
 
 @keyframes fadeIn {
     0% {
