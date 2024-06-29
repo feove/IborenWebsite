@@ -147,8 +147,8 @@ section {
 }
 
 .text-box.reveal {
-    opacity: 1; /* Make visible */
-    transform: translateY(0); /* Reset position */
+    opacity: 1; 
+    transform: translateY(0); 
 }
 
 .background-Picture {
