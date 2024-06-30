@@ -7,12 +7,13 @@ body {
 
 
 header {
+    scale: 0.94;
     text-decoration: none;
     list-style: none;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 105%;
     display: flex;
     padding: 0.5% 2%;
     justify-content: space-between;
@@ -25,6 +26,7 @@ header {
     border-radius: 15px;
 }
 header nav {
+  
     background: linear-gradient(rgba(71, 71, 71, 0.588), rgba(134, 134, 134, 0.485));
     padding: 0.9em 2em;
     border-radius: 5vw;
@@ -123,6 +125,7 @@ body.scrolled .logo-container {
     transform: scale(0.95);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     border: 3px solid rgba(0, 0, 0, 0.7);
+   
     
 }
 .logo-bg {
@@ -136,7 +139,8 @@ body.scrolled .logo-container {
     transition: opacity 0.8s ease;
     border-radius: 10px; 
     border: 2px solid rgba(0, 0, 0, 0.366);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left:-4%; 
 }
 
 body.scrolled .logo-bg {

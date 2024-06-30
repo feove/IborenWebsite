@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    
+    
+}
+
+body {
+    
+    height: 300vh;
+    min-height: 1vh;
+    background-color: #ffffff;
+    color: #fff;
+    margin: 0;
+    z-index: 3;
+    font-family: 'Bogart', sans-serif;
+   
+}
