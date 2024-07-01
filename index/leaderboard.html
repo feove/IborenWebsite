@@ -29,4 +29,44 @@
             </ul>
         </nav>
     </header>
+    <div class="parallax">
+        <div class="image-container">
+            <img src="../media/parallax-plain-leaderboard.png" id="plain" alt="plain">
+        </div>
+        <img src="../media/parallax-mountain-leaderboard.png" id="mount" alt="mountain">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
+<script>
+    document.addEventListener('scroll', function () {
+    const scrollPosition = window.pageYOffset;
+    const mount = document.getElementById('mount');
+    mount.style.transform = 'translateY(' + scrollPosition * 0.6 + 'px)';
+});
+
+
+
+
+</script>
+<script>
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        if (window.scrollY > 100) {
+            document.body.classList.add('scrolled');
+        } else {
+            document.body.classList.remove('scrolled');
+        }
+    });
+</script>

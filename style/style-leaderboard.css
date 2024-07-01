@@ -6,18 +6,37 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    
-    
 }
 
 body {
-    
     height: 300vh;
-    min-height: 1vh;
     background-color: #ffffff;
     color: #fff;
     margin: 0;
-    z-index: 3;
-    font-family: 'Bogart', sans-serif;
-   
+    font-family: 'Roboto Slab', serif;
+}
+
+.parallax {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.parallax img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+#plain {
+    top: -0.08%;
+    left: 0;
+    z-index: 2;
+}
+
+#mount {
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
