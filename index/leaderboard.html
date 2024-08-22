@@ -10,8 +10,6 @@
    
     <link rel="stylesheet" href="../style/navbar.css">
     <link rel="stylesheet" href="../style/style-leaderboard.css">
-    
-    
 </head>
 <body>
     <header>
@@ -29,38 +27,33 @@
             </ul>
         </nav>
     </header>
+
     <div class="parallax">
         <div class="image-container">
             <img src="../media/parallax-plain-leaderboard.png" id="plain" alt="plain">
         </div>
         <img src="../media/parallax-mountain-leaderboard.png" id="mount" alt="mountain">
+       
     </div>
 
+    <div class="leaderboard-bg">
+        <div class="band"></div>
+        <div class="leaderboard">
+            <!-- Name,Time,Proof,Version,Date -->
 
 
 
-
-
-
-
-
-
-
-
-
+        </div>
+      
+    </div>
 </body>
 <script>
     document.addEventListener('scroll', function () {
-    const scrollPosition = window.pageYOffset;
-    const mount = document.getElementById('mount');
-    mount.style.transform = 'translateY(' + scrollPosition * 0.6 + 'px)';
-});
+        const scrollPosition = window.pageYOffset;
+        const mount = document.getElementById('mount');
+        mount.style.transform = 'translateY(' + scrollPosition * 0.6 + 'px)';
+    });
 
-
-
-
-</script>
-<script>
     window.addEventListener('scroll', function() {
         const header = document.querySelector('header');
         if (window.scrollY > 100) {
