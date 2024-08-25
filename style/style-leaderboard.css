@@ -106,7 +106,14 @@ body {
     opacity: 0.6; 
 }
 
+#youtube_logo{
 
+    width: 15%;
+    height: auto;
+    scale: 1.5;
+
+
+}
 /* Leaderboard  */
 .leaderboard {
     position: relative;
@@ -149,19 +156,39 @@ th, td {
     padding: 2%;
     text-align: center;
     border: 2px solid #ffffff;
-    transition: background-color 0.3s ease, color 0.3s ease; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
 }
 
 th {
-    font-size: 1.8em;
+    padding: 2%;
+    font-size: 1.8vw;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.3); 
+    background-color: rgba(0, 0, 0, 0.3);
+    
+    letter-spacing: 0.1em;
+    border-bottom: 3px solid #ffffff; 
+    font-weight: 700;
 }
 
 td {
-    font-size: 1.2em;
+    padding: 0.5%;
+    font-size: 1.6vw;
     color: #ffffff;
+    font-weight: 900;
+    letter-spacing: 0.05em; 
+    background-color: rgba(0, 0, 0, 0.2); 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
+    transition: transform 0.2s ease, background-color 0.3s ease;
 }
+
+td:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #000000;
+    transform: scale(1.05); 
+    text-shadow: none;
+}
+
 
 th:nth-child(1),
 td:nth-child(1) {
