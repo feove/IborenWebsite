@@ -33,16 +33,24 @@
             <img src="../media/parallax-plain-leaderboard.png" id="plain" alt="plain">
         </div>
         <img src="../media/parallax-mountain-leaderboard.png" id="mount" alt="mountain">
-       
+        
     </div>
-
     
 
     <div class="leaderboard-bg">
+        <div class="second-band"></div>
         <div class="leaderboard-title">
             <h1>Top Speedruns Leaderboard</h1>
         </div>
-        <div class="band"></div>
+
+        <div class="band">
+            <div class="button-container">
+                <button class="leaderboard-button">Chapter 1</button>
+                <button class="leaderboard-button">Chapter 2</button>
+                <button class="leaderboard-button">Chapter 3</button>
+            </div>
+        </div>
+
         <div class="leaderboard">
             <table>
                 <thead>
@@ -128,6 +136,8 @@
                         <td>1.0</td>
                         <td>---</td>
                     </tr>
+                    
+                   
                 </tbody>
             </table>
         </div>
@@ -136,6 +146,27 @@
     
 </body>
 <script>
+
+    document.querySelectorAll('.leaderboard-button').forEach(button => {
+        button.addEventListener('click', function() {
+        document.querySelectorAll('.leaderboard-button').forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+                 
+            });
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
     document.addEventListener('scroll', function () {
         const scrollPosition = window.pageYOffset;
         const mount = document.getElementById('mount');
