@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+  cursor: none;
+ 
+  box-sizing: border-box;
+}
+
+
+h1 {
+    font-family: montserrat;
+    font-size: 40px;
+  }
+  
+  a {
+    font-family: Montserrat;
+    position: relative;
+    text-decoration: none;
+    
+  }
+  
+  a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 30%;
+    display: block;
+    margin-top: 5%;
+    left: 0%;
+    background: rgba(0, 0, 0, 0);
+    transition: width .3s ease;
+  }
+  
+  a:hover:after{
+    width: 100%;
+    left: 0%;
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  .cursor {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgb(169, 169, 169);
+    background-color: rgba(255, 255, 255, 0.668);
+    transition: transform 200ms ease-out, border 200ms ease-out, background-color 200ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 10px), -50%) scale(1);
+    z-index: 999999999999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.cursor2 {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0.4;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: none;
+    transition: width 300ms, height 300ms, opacity 300ms, transform 300ms;
+    z-index: 999999999999;
+}
+
+.hover {
+    background-color: rgba(57, 133, 133, 0.567) !important;
+    opacity: 0.6 !important;
+}
+
+.cursorinnerhover {
+    width: 40px !important;
+    height: 40px !important;
+    opacity: 0.7 !important;
+    transform: scale(1.1);
+    left: -5%;
+}
