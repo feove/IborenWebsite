@@ -59,7 +59,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th>chapter1</th>
+                        <th>Position</th>
                         <th>Username</th>
                         <th>Time</th>
                         <th>Proof</th>
@@ -164,12 +164,12 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>#1</td>
-                    <td>Z____z</td>
-                    <td>3:05</td>
-                    <td>Y'en a pas</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
                     <td>1.0</td>
-                    <td>28/08/2024</td>
+                    <td>---</td>
                 </tr>
                 <tr>
                     <td>---</td>
@@ -260,12 +260,12 @@
         </thead>
         <tbody>
             <tr>
-                <td>#1</td>
-                <td>Nils</td>
-                <td>2:03</td>
-                <td>Y'en a pas</td>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
                 <td>1.0</td>
-                <td>28/08/2024</td>
+                <td>---</td>
             </tr>
             <tr>
                 <td>---</td>
@@ -405,25 +405,42 @@
         }
     });
 
-        
     const buttons = document.querySelectorAll('.leaderboard-button');
-    const tables = document.querySelectorAll('.leaderboard');
+const tables = document.querySelectorAll('.leaderboard');
 
-
-    buttons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            
-            buttons.forEach(btn => btn.classList.remove('active'));
-            tables.forEach(table => table.classList.remove('active'));
-
-            button.classList.add('active');
-            tables[index].classList.add('active');
+buttons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+       
+        buttons.forEach(btn => btn.classList.remove('active'));
+        tables.forEach(table => {
+            table.classList.remove('active');
+            table.classList.remove('chapter1'); 
+            table.classList.remove('chapter2');
+            table.classList.remove('chapter3');  
         });
+
+      
+        button.classList.add('active');
+        tables[index].classList.add('active');
+
+       
+        if (index === 0) {
+            tables[index].classList.add('chapter1');
+        } else if (index === 1) {
+            tables[index].classList.add('chapter2');
+        }else{
+
+            tables[index].classList.add('chapter3');
+        }
+       
     });
+});
 
 
-    buttons[0].classList.add('active');
-    tables[0].classList.add('active');
+buttons[0].classList.add('active');
+tables[0].classList.add('active');
+tables[0].classList.add('chapter1'); 
+
 
     
 </script>

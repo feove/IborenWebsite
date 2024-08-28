@@ -62,9 +62,9 @@ body {
 }
 #pirate {
     left: 5%;
-    top: 8%;
+    top: 18%;
     z-index: 1;
-    width: 36%;
+    width: 30%;
     height: auto;
     transform: rotate(20deg) scale(1);
     transition: transform 1.5s ease-in-out, filter 0.3s ease, box-shadow 0.3s ease;
@@ -77,7 +77,7 @@ body {
     
 }
 
-/* Adding a hover effect to enhance the interactivity */
+
 #pirate:hover {
     transform: rotate(25deg) scale(1.05);
     filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.9))
@@ -86,17 +86,17 @@ body {
 
 @keyframes scrollPirate {
     0% {
-        top: 10%;
+        top: 21%;
         left: 5%;
         transform: rotate(25deg) scale(1);
     }
     50% {
-        top: 15%;
+        top: 24%;
         left: 6%;
         transform: rotate(30deg) scale(0.9);
     }
     100% {
-        top: 10%;
+        top: 21%;
         left: 5%;
         transform: rotate(25deg) scale(1);
     }
@@ -198,13 +198,32 @@ body {
     border-radius: 10px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     background: linear-gradient(135deg, #3cb572, #23ac5a, #0f6f3fbe); 
-    animation: gradientAnimation 2s ease infinite;
-    background-size: 200% 200%;
+    background-position: 60%;
+    
+    background-size: 110% 110%;
     display: none;
 }
-.leaderboard.active {
-    display: block; /* Only the active table is displayed */
+
+
+.leaderboard.chapter1 {
+    background-image: url('..//media/bg-treashunt-forest.png'); 
 }
+
+.leaderboard.chapter2 {
+    background-image: url('../media/bg-treashunt-mountain.png'); 
+}
+
+.leaderboard.chapter3 {
+    background-image: url('../media/bg-treashunt-volcan.png'); 
+    background-size: 115% 115%;
+    background-position: 60% 100%;
+}
+
+
+.leaderboard.active {
+    display: block; 
+}
+
 
 @keyframes gradientAnimation {
     0% {
@@ -253,7 +272,7 @@ td {
     color: #ffffff;
     font-weight: 900;
     letter-spacing: 0.05em; 
-    background-color: rgba(0, 0, 0, 0.2); 
+    background-color: rgba(0, 0, 0, 0.9); 
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
     transition: transform 0.2s ease, background-color 0.3s ease;
 }
@@ -268,32 +287,32 @@ td:hover {
 
 th:nth-child(1),
 td:nth-child(1) {
-    background-color: rgba(0, 100, 160, 0.7); /* Dark Blue */
+    background-color: rgba(0, 100, 160, 0.9); /* Dark Blue */
 }
 
 th:nth-child(2),
 td:nth-child(2) {
-    background-color: rgba(0, 85, 128, 0.7); /* Dark Green */
+    background-color: rgba(0, 85, 128, 0.9); /* Dark Green */
 }
 
 th:nth-child(3),
 td:nth-child(3) {
-    background-color: rgba(25, 43, 135, 0.7); /* Dark Red */
+    background-color: rgba(25, 43, 135, 0.9); /* Dark Red */
 }
 
 th:nth-child(4),
 td:nth-child(4) {
-    background-color: rgba(45, 112, 160, 0.7); /* Dark Brown */
+    background-color: rgba(45, 112, 160, 0.9); /* Dark Brown */
 }
 
 th:nth-child(5),
 td:nth-child(5) {
-    background-color: rgba(11, 126, 184, 0.7); /* Dark Gold */
+    background-color: rgba(11, 126, 184, 0.9); /* Dark Gold */
 }
 
 th:nth-child(6),
 td:nth-child(6) {
-    background-color: rgba(84, 170, 212, 0.7); /* Dark Gold */
+    background-color: rgba(84, 170, 212, 0.9); /* Dark Gold */
 }
 
 /* Hover effect */
