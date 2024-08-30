@@ -235,3 +235,95 @@ body.scrolled .logo-bg {
         font-size: 0.7em;
     }
 }
+/* ----------------------------------- */
+.language-switcher {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background: linear-gradient(45deg, #34e89e, #0f3443);
+    padding: 0.4em 1em;
+    top: 18%;
+    left: 14%;
+    
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.language-switcher button {
+    background: rgb(0, 0, 0);
+    border: none;
+    border-radius: 15px;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.language-switcher button:hover {
+    background: #0f3443;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.language-switcher button:active {
+    transform: scale(0.95);
+}
+
+.language-switcher button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.language-switcher button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.language-switcher button.active {
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .language-switcher {
+        padding: 0.3em 0.8em;
+        border-radius: 15px;
+    }
+
+    .language-switcher button {
+        padding: 0.4em 0.8em;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 576px) {
+    .language-switcher {
+        flex-direction: column;
+        padding: 0.3em 0.6em;
+        border-radius: 10px;
+    }
+
+    .language-switcher button {
+        padding: 0.3em 0.6em;
+        font-size: 0.8em;
+    }
+}

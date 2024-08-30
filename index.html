@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style/navbar.css">
     <link rel="stylesheet" href="style/style-home.css">
     <link rel="stylesheet" href="/style/custom-cursor.css">
+    <script src="js/index-lang.js"></script>
     
     
 </head>
@@ -27,7 +28,7 @@
                 <div class="background-layer" data-speed="5"></div>
                 <img src="media/Forestpt1.png" class="layer" id="plain" data-speed="0">
                 <img src="media/Forestpt2.png" class="layer" id="sky" data-speed="2">
-                <a href="index/download.html"><img src="media/logo_v0.png" class="logo-rotate" id="logo" alt="Logo"></a>
+                <a href="./index/download.html"><img src="media/logo_v0.png" class="logo-rotate" id="logo" alt="Logo"></a>
             </div>
         </section>
     </div>
@@ -37,11 +38,16 @@
                 <a href="index/download.html"><img src="media/iboren.png" id="ibo" alt="iboren"></a>
             </div>
         </div>
+       <div class="language-switcher">
+    <button id="lang-en" style="display: none;">English</button>
+    <button id="lang-fr" class="active">Français</button>
+</div>
+
+        
         <nav>
-           
             <ul>
                 <li><a href="index.html"  class ="active a-nav">Home</a></li>
-                <li><a href="index/download.html" class="a-nav">Download</a></li>
+                <li><a href="index/download.html" class="a-nav" id="download-nav">Download</a></li>
                 <li><a href="index/about.html" class="a-nav">About</a></li>
                 <li><a href="index/leaderboard.html" class="a-nav">Ranking</a></li>
             </ul>
@@ -140,7 +146,7 @@
             <li class="footer-item">
                 <a href="https://mail.google.com" target="_blank" class="contact-link">
                     <img src="media/contact-logo.png" id="contact-logo" alt="Contact" class="footer-icon">
-                    <span>Contact us</span>
+                    <span id="contact">Contact us</span>
                 </a>
             </li>
             <li class="footer-item">
@@ -197,6 +203,7 @@
             if (textBoxPosition < screenPosition) {
                 textBox.classList.add('reveal');
                 textBox.classList.add('visible');
+               
             }
         });
 
@@ -204,7 +211,8 @@
     const animatedTitle = document.querySelector('.animated-title');
     const titlePosition = animatedTitle.getBoundingClientRect().top;
     const screenPosition = window.innerHeight / 1.3;
-
+    const trad = document.querySelector('language-switcher');
+    
     if (titlePosition < screenPosition) {
         animatedTitle.classList.add('visible');
     }
@@ -250,7 +258,27 @@
  
    
 
-      
+        document.addEventListener("DOMContentLoaded", function() {
+        const btnEnglish = document.getElementById('lang-en');
+        const btnFrench = document.getElementById('lang-fr');
+
+        btnEnglish.addEventListener('click', function() {
+            btnEnglish.style.display = 'none';
+            btnFrench.style.display = 'inline-block';
+            btnEnglish.classList.remove('active');
+            btnFrench.classList.add('active');
+        
+        });
+
+        btnFrench.addEventListener('click', function() {
+            btnFrench.style.display = 'none';
+            btnEnglish.style.display = 'inline-block';
+            btnFrench.classList.remove('active');
+            btnEnglish.classList.add('active');
+            
+        });
+    });
+
 
     </script>
 </body>

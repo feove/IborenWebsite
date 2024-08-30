@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../style/navbar.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../style/custom-cursor.css">
+    <script src="../js/download-lang.js"></script>
     <title>Téléchargement</title>
 
 </head>
@@ -20,6 +21,11 @@
                 <a href="../index/download.html"><img src="../media/iboren.png" id="ibo" alt="iboren"></a>
             </div>
         </div>
+        </div>
+            <div class="language-switcher">
+            <button id="lang-en" style="display: none;">English</button>
+            <button id="lang-fr" class="active">Français</button>
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html" class="a-nav" style="text-decoration-line: none;" >Home</a></li>
@@ -27,6 +33,7 @@
                 <li><a href="about.html"  class="a-nav" style="text-decoration-line: none;" >About</a></li>
                 <li><a href="leaderboard.html" class="a-nav">Ranking</a></li>
             </ul>
+            
         </nav>
     </header>
     <div class="download-bg" style="margin-top: -0.1%;">
@@ -156,7 +163,26 @@
     });
 
         
+    document.addEventListener("DOMContentLoaded", function() {
+        const btnEnglish = document.getElementById('lang-en');
+        const btnFrench = document.getElementById('lang-fr');
 
+        btnEnglish.addEventListener('click', function() {
+            btnEnglish.style.display = 'none';
+            btnFrench.style.display = 'inline-block';
+            btnEnglish.classList.remove('active');
+            btnFrench.classList.add('active');
+        
+        });
+
+        btnFrench.addEventListener('click', function() {
+            btnFrench.style.display = 'none';
+            btnEnglish.style.display = 'inline-block';
+            btnFrench.classList.remove('active');
+            btnEnglish.classList.add('active');
+            
+        });
+    });
 
 
 </script>
