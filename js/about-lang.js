@@ -13,6 +13,7 @@ const content = {
         baptiste_role: "Art Director",
         baptiste_des: "I conceived the level design, developed the scenario, and managed the graphic assets to create immersive environments and a compelling story.",
         realization: "Realization of Treashunt",
+        team : "Our Team",
         october: "October",
         october_des: "Starting the project, writing the specifications, brainstorming about the game during our many calls, etc.",
         november: "November",
@@ -77,7 +78,7 @@ const content = {
         mar : "Soutenance Mars",
         may : "Mai/Juin",
         web : "Réalisation du Site Web",
-        //    ---
+        team : "Notre Equipe",
         tim_oct : "Octobre 2023",
         tim_jan : "Janvier 2023",
         tim_mar : "Mars 2023",
@@ -163,6 +164,7 @@ function switchLanguage(language) {
     document.querySelector('#tim_mar').textContent = content[language].tim_mar;
     document.querySelector('#tim_jun').textContent = content[language].tim_jun;
     document.querySelector('#start').textContent = content[language].start;
+    document.querySelector('#team').textContent = content[language].team;
 
     document.querySelector('#host').textContent = content[language].host;
     document.querySelector('#first').textContent = content[language].first;
