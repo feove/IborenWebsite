@@ -2,7 +2,7 @@
 
 **Treashunt** is an exciting adventure game filled with thrilling parkour challenges and engaging mini-games! Downloadable for Windows, Treashunt is brought to you by **IBOREN**, a company dedicated to creating fun and immersive gaming experiences.
 
-**🎮 Play Online:** [https://feove.github.io/IborenWebsite/](https://feove.github.io/IborenWebsite/)
+**🎮 Visit and Download the Game:** [https://feove.github.io/IborenWebsite/](https://feove.github.io/IborenWebsite/)
 
 ## 📋 Table of Contents
 
@@ -19,7 +19,6 @@
 
 Treashunt is an action-adventure game that combines parkour elements with various mini-games to keep the gameplay dynamic and entertaining. Embark on a journey through diverse environments, overcome obstacles, and enjoy mini-games that provide a refreshing break from the main quest.
 
-**🌐 Play Online:** You can now play Treashunt directly in your browser at [https://feove.github.io/IborenWebsite/](https://feove.github.io/IborenWebsite/)
 
 ## ✨ Features
 
@@ -59,15 +58,6 @@ To install Treashunt on your Windows machine, follow these steps:
 - Explore each level thoroughly to discover hidden areas
 - Practice makes perfect - some challenges may require multiple attempts
 
-## 🤝 Contributing
-
-We welcome contributions from the community! If you'd like to contribute to Treashunt, please follow these steps:
-
-1. Fork the repository
-2. Create a new branch: `git checkout -b feature-branch`
-3. Make your changes and commit them: `git commit -m 'Add new feature'`
-4. Push to the branch: `git push origin feature-branch`
-5. Create a pull request
 
 ## 📄 License
 
